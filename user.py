@@ -26,3 +26,9 @@ class User:
     def delete_user(self):
         """delete_user method that deletes a saved user from the userlist"""
         User.userslist.remove(self)
+
+    @classmethod
+    def display_users(cls):
+        """method that returns info from the userslist"""
+        return cls.userslist
+
