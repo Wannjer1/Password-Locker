@@ -28,18 +28,20 @@ class Credentials:
             return cls.accounts
 
     @classmethod
-    def find_by_name(self, name):
-        '''method that takes in a name and returns a credential'''
+    def find_cred(cls,accountusername):
+        """method to find users credentials/name"""
 
-        for credentials in Credentials.accounts:
-            if credentials.accountusername == name:
+        for credentials in cls.accounts:
+            if credentials.accountusername == accountusername:
                 return credentials
 
+    def cred_exist(cls,accountusername):
+        """method to check if users credentials exist"""
+
+        for credentials in cls.accounts:
+            if credentials.accountusername == accountusername:
+                return True
+        return False
 
 
-    # def find_by_number(cls,number):
-    #     """method that takes in a number and returns a contact that matches that number"""
 
-    #     for account in cls.accounts:
-    #         if account.accountusername == number:
-    #             return account
