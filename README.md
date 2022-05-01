@@ -1,8 +1,8 @@
-# PASSWORD Loccker
+# PASSWORD Locker
 
 by Ann Wanjeri
 
-A simple password storage and generating app that runs on the terminal.
+A simple password storage and generating app that runs on the terminal. Itallows users to create an account that stores their passwoords.
 
 ## Technologies Used
 
@@ -18,7 +18,8 @@ A simple password storage and generating app that runs on the terminal.
 ## Behaviour Driven Development
 
 The user is able to;
-_ create an account with a username,email and password
-_ store existing accounts
-_ create new credentials for an account
-_ edit existing account credentials \* delete accounts
+
+- create an account with a username,email and password
+- store existing accounts
+- create new credentials for an account
+- edit existing account credentials \* delete accounts

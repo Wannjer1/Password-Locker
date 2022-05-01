@@ -15,6 +15,7 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_account.accountpassword,"#pass123")
 
     def test_save_user(self):
+        '''Tests is a new credential has been created and saved'''
         self.new_account.save_account()
         self.assertEqual(len(Credentials.accounts),1)
 
@@ -26,6 +27,15 @@ class TestCredentials(unittest.TestCase):
         test_account.save_account()
         self.new_account.delete_account()
         self.assertEqual(len(Credentials.accounts),1)
+
+    def test_account_exist(self):
+        '''test to identify whether a user account or credential exists'''
+
+        self.new_account.save_account()
+        the_account = Credentials("Ann", "annie@gmail.com", "#pass123")
+        the_account.save_account()
+        account_is_found = Credentials.if_account_exist("annie@gmail.com")
+        self.assertTrue(account_is_found)
 
 
     def test_display_user(self):
